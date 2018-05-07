@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DINPro-Medium.otf">
+            <string>DINPro-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AlertView" customModule="PiggyBak" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="dkk-8w-ROT">
+                    <rect key="frame" x="16" y="18" width="343" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="ogc-VB-GEv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="DINPro-Medium" family="DIN Pro" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cbr-Ru-ikE">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <connections>
+                        <action selector="closeTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="7CM-NK-nkM"/>
+                    </connections>
+                </button>
+                <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="icCrossWhite" translatesAutoresizingMaskIntoConstraints="NO" id="O1O-fK-90n">
+                    <rect key="frame" x="9" y="35" width="15" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="15" id="Dy9-4a-mY9"/>
+                        <constraint firstAttribute="height" constant="15" id="UfN-yr-lsl"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.1803921568627451" green="0.83921568627450982" blue="0.51764705882352935" alpha="1" colorSpace="deviceRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="O1O-fK-90n" secondAttribute="bottom" constant="14" id="6Yu-6a-GL9"/>
+                <constraint firstItem="Cbr-Ru-ikE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="93a-Jj-p2U"/>
+                <constraint firstItem="Cbr-Ru-ikE" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="EKV-U9-nCf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="dkk-8w-ROT" secondAttribute="bottom" constant="6" id="LX7-66-sKF"/>
+                <constraint firstItem="dkk-8w-ROT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="S7V-ds-iRT"/>
+                <constraint firstItem="Cbr-Ru-ikE" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="VL9-wB-6Ho"/>
+                <constraint firstItem="Cbr-Ru-ikE" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="dd0-3w-cha"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dkk-8w-ROT" secondAttribute="trailing" constant="16" id="jsQ-gX-r7E"/>
+                <constraint firstItem="O1O-fK-90n" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="9" id="rgE-st-R2K"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="messageLabel" destination="dkk-8w-ROT" id="gD9-1x-yfX"/>
+            </connections>
+            <point key="canvasLocation" x="34.5" y="363"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icCrossWhite" width="22" height="22"/>
+    </resources>
+</document>
